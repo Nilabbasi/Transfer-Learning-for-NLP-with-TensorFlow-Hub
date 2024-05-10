@@ -16,7 +16,8 @@ Insincere questions are those that exhibit characteristics such as a non-neutral
 
 There is a noticeable class imbalance issue in our dataset. The majority of the questions are labeled as sincere or non-toxic, while the number of insincere questions is comparatively smaller.
 
-!Class Imbalance 
+!Class Imbalance(https://github.com/Nilabbasi/Transfer-Learning-for-NLP-with-TensorFlow-Hub/assets/110483698/58da4927-d039-45d2-a8ec-7e6da4214407)
+
 
 To address this class imbalance problem, various strategies can be employed, such as under-sampling the majority class or over-sampling the minority class using different algorithms or techniques. However, for the scope of this project, I have decided not to specifically address this problem within this notebook.
 
@@ -61,6 +62,13 @@ Our dataset comprises questions paired with corresponding labels. To train the s
 - Usage of pre-trained NLP text embedding models from TensorFlow Hub.
 - Transfer learning and fine-tuning on real-world text data.
 - Visualization of model performance metrics using Matplotlib, TensorFlow documentation package, and TensorBoard.
+
+## Results
+
+![Accuracies](https://github.com/Nilabbasi/Transfer-Learning-for-NLP-with-TensorFlow-Hub/assets/110483698/92c92612-9952-4aa8-8d6d-ec00b5c9b80c)
+
+
+![Loss Curves](https://github.com/Nilabbasi/Transfer-Learning-for-NLP-with-TensorFlow-Hub/assets/110483698/d87645b8-8e85-4dc0-931f-fba7be42c8da)
 
 ## References
 
