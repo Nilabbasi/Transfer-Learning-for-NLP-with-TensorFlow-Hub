@@ -4,17 +4,28 @@
 
 ## Project Overview
 
-**In this project**, the aim is to address the challenge of improving the quality of online discussions by focusing on the detection of toxic content. As a case study, the analysis of questions asked on Quora has been chosen -a platform known for its diverse user-generated content. The goal is to develop a predictive model that can accurately label questions as either sincere or insincere.
+In this project, the aim is to address the challenge of improving the quality of online discussions by focusing on the detection of toxic content. As a case study, the analysis of questions asked on Quora has been chosen -a platform known for its diverse user-generated content. The goal is to develop a predictive model that can accurately label questions as either sincere or insincere.
 
-### Dataset Information
+## Dataset Information
 
-The dataset used in this project is the Quora Insincere Questions Classification dataset, which can be accessed on [Kaggle](https://www.kaggle.com/c/quora-insincere-questions-classification/data).I use a fraction of the Quora Insincere Questions dataset (`train.csv`) due to the extensive pre-training of our text classification models. However, you can choose to utilize the entire dataset if needed.
+The dataset used in this project is the Quora Insincere Questions Classification dataset, which can be accessed on [Kaggle](https://www.kaggle.com/c/quora-insincere-questions-classification/data). I use a fraction of the Quora Insincere Questions dataset (`train.csv`) due to the extensive pre-training of our text classification models. However, you can choose to utilize the entire dataset if needed.
 
 Insincere questions are those that exhibit characteristics such as a non-neutral tone, disparaging language, the inclusion of inflammatory content based on false information, or the presence of sexually explicit content intended to shock or provoke. By identifying and flagging these insincere questions, we can contribute to creating a healthier and more respectful online environment.
 
-### Inspiration
+## Class Imbalance Issue
 
-**This project draws inspiration** from the Coursera project [Transfer Learning for NLP with TensorFlow Hub](https://www.coursera.org/projects/transfer-learning-nlp-tensorflow-hub/), with modifications to enhance visualization and conceptual understanding.
+There is a noticeable class imbalance issue in our dataset. The majority of the questions are labeled as sincere or non-toxic, while the number of insincere questions is comparatively smaller.
+
+!Class Imbalance 
+
+To address this class imbalance problem, various strategies can be employed, such as under-sampling the majority class or over-sampling the minority class using different algorithms or techniques. However, for the scope of this project, I have decided not to specifically address this problem within this notebook.
+
+Instead, I will utilize a stratified sampling strategy. This approach assumes that the class imbalance observed in our dataset is reflective of the real-world distribution. Therefore, when creating our training and validation splits, we will sample data in a way that maintains this imbalance within both the training and validation sets. This ensures that the proportions of sincere and insincere questions remain consistent in the training and validation data, allowing our model to learn and generalize effectively.
+
+
+## Inspiration
+
+This project draws inspiration from the Coursera project [Transfer Learning for NLP with TensorFlow Hub](https://www.coursera.org/projects/transfer-learning-nlp-tensorflow-hub/), with modifications to enhance visualization and conceptual understanding.
 
 
 ## Methodology
@@ -23,7 +34,7 @@ Insincere questions are those that exhibit characteristics such as a non-neutral
 - Transfer learning enables fine-tuning models on text data, saving training resources and achieving good model generalization.
 - Model performance metrics are visualized using [TensorBoard](https://www.tensorflow.org/tensorboard).
 
-### Why Transfer Learning in NLP?
+## Why Transfer Learning in NLP?
 
 Transfer learning leverages shared knowledge about language across NLP tasks, improving model performance and efficiency. This is because many NLP tasks share common linguistic representations and structural similarities in language. When performing these tasks, they can inform and benefit from each other, making transfer learning a powerful approach in NLP.
 
