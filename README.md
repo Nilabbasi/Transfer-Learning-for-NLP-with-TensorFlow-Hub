@@ -8,20 +8,20 @@ In this project, the aim is to address the challenge of improving the quality of
 
 ## Dataset Information
 
-The dataset used in this project is the Quora Insincere Questions Classification dataset, which can be accessed on [Kaggle](https://www.kaggle.com/c/quora-insincere-questions-classification/data). I use a fraction of the Quora Insincere Questions dataset (`train.csv`) due to the extensive pre-training of our text classification models. However, you can choose to utilize the entire dataset if needed.
+The dataset used in this project is the Quora Insincere Questions Classification dataset, which can be accessed on [Kaggle](https://www.kaggle.com/c/quora-insincere-questions-classification/data). I use a fraction of the Quora Insincere Questions dataset (`train.csv`) due to the extensive pre-training of the text classification models. However, you can choose to utilize the entire dataset if needed.
 
 Insincere questions are those that exhibit characteristics such as a non-neutral tone, disparaging language, the inclusion of inflammatory content based on false information, or the presence of sexually explicit content intended to shock or provoke. By identifying and flagging these insincere questions, we can contribute to creating a healthier and more respectful online environment.
 
 ## Class Imbalance Issue
 
-There is a noticeable class imbalance issue in our dataset. The majority of the questions are labeled as sincere or non-toxic, while the number of insincere questions is comparatively smaller.
+There is a noticeable class imbalance issue in this dataset. The majority of the questions are labeled as sincere or non-toxic, while the number of insincere questions is comparatively smaller.
 
 ![Class Imbalance](https://github.com/Nilabbasi/Transfer-Learning-for-NLP-with-TensorFlow-Hub/assets/110483698/58da4927-d039-45d2-a8ec-7e6da4214407)
 
 
 To address this class imbalance problem, various strategies can be employed, such as under-sampling the majority class or over-sampling the minority class using different algorithms or techniques. However, for the scope of this project, I have decided not to specifically address this problem within this notebook.
 
-Instead, I will utilize a stratified sampling strategy. This approach assumes that the class imbalance observed in our dataset is reflective of the real-world distribution. Therefore, when creating our training and validation splits, we will sample data in a way that maintains this imbalance within both the training and validation sets. This ensures that the proportions of sincere and insincere questions remain consistent in the training and validation data, allowing our model to learn and generalize effectively.
+Instead, I will utilize a stratified sampling strategy. This approach assumes that the class imbalance observed in the dataset is reflective of the real-world distribution. Therefore, when creating training and validation splits, I sample data in a way that maintains this imbalance within both the training and validation sets. This ensures that the proportions of sincere and insincere questions remain consistent in the training and validation data, allowing the model to learn and generalize effectively.
 
 
 ## Inspiration
@@ -41,7 +41,7 @@ Transfer learning leverages shared knowledge about language across NLP tasks, im
 
 ## Text Data and Representations
 
-Our dataset comprises questions paired with corresponding labels. To train the statistical classification model effectively, we use question vectors as distributed representations of the questions. These question vectors, along with their corresponding labels, are employed during training to build and fine-tune the model.
+This dataset comprises questions paired with corresponding labels. To train the statistical classification model effectively, I use question vectors as distributed representations of the questions. These question vectors, along with their corresponding labels, are employed during training to build and fine-tune the model.
 
 ## Table of Contents
 
